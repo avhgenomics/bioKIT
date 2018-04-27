@@ -2,7 +2,7 @@
 % Please edit documentation in R/count_cells.R
 \name{count_cells}
 \alias{count_cells}
-\title{count_cells}
+\title{Count Cells}
 \usage{
 count_cells(sampleID = NULL, live, dead = 0, squares_counted = 4,
   sample_aliquot_vol = 0, PBS_vol = 0, Trypan_blue_vol = 0,
