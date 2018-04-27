@@ -1,7 +1,7 @@
 #Hemocytometry-based cell count estimation.
 
 
-#' count_cells
+#' Count Cells
 #'
 #' count_cells() is a calculator for standard hemocytometry applications.
 #'
