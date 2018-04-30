@@ -2,29 +2,29 @@
 % Please edit documentation in R/homer_functions.R
 \name{split_motifs}
 \alias{split_motifs}
-\title{FUNCTION_TITLE}
+\title{Split Motifs}
 \usage{
 split_motifs(annotated_df, motif_col, zero_based = F, filter_for_motifs = F,
   motif_label = NULL, return_bedfile_format = F)
 }
 \arguments{
-\item{annotated_df}{DESCRIPTION.}
+\item{annotated_df}{the annotated df.}
 
-\item{motif_col}{DESCRIPTION.}
+\item{motif_col}{the name of the motif column as a string.}
 
-\item{zero_based}{DESCRIPTION.}
+\item{zero_based}{Are the locations 0-based or 1 based? logical.}
 
-\item{filter_for_motifs}{DESCRIPTION.}
+\item{filter_for_motifs}{Remove any peaks that do not contain a motif? Logical.}
 
-\item{motif_label}{DESCRIPTION.}
+\item{motif_label}{Write a label to fill in for the motif.}
 
-\item{return_bedfile_format}{DESCRIPTION.}
+\item{return_bedfile_format}{Return the motifs in a bed-style structure? Requires filter_for_motifs to be true.}
 }
 \value{
-RETURN_DESCRIPTION
+returns a df.
 }
 \description{
-FUNCTION_DESCRIPTION
+This takes an annotated txt file from annotatePeaks.pl (after loading as a df) and performs minor cleaning functions on the annotated motif set.  This currently works for 1 motif at a time.
 }
 \examples{
 # ADD_EXAMPLES_HERE
