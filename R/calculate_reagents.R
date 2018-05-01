@@ -17,7 +17,7 @@
 #' @param Stock_unit_col number of stock unit col, if custom
 #' @param Final_conc_col number of final concentration col, if custom
 #' @param Final_unit_col number of final unit col, if custom
-#'
+#' @export
 #' @return a dataframe with the calculations.
 #' @examples
 #' # ADD_EXAMPLES_HERE

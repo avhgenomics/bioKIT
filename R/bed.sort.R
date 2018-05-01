@@ -5,7 +5,7 @@
 #'
 #' @param bed_file_path path to the unsorted bed file.
 #' @param output_path path to the sorted bed file, the output.
-#'
+#' @export
 #' @return returns a bed file.
 #' @examples
 #' # bed.sort(bed_file_path = "R/locations.bed",output_path = "R/locations_sorted.bed")

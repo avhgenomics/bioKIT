@@ -13,7 +13,7 @@
 #' @param PBS_vol The ul of PBS or other solution that the sample aliquot is diluted with. Used to determine the dilution factor.
 #' @param Trypan_blue_vol The ul of Trypan Blue, if used. A good starting point is usually 1:1 (sample_aliquot+PBS):Trypan Blue.
 #' @param original_sample_vol How many ml is the original set of cells suspended in?
-#'
+#' @export
 #' @return returns a dataframe containing all of the calculations.
 #' @examples
 #' # count_cells(sampleID = "A",live = 300,dead = 10,squares_counted = 4,sample_aliquot_vol = 10,PBS_vol = 40,Trypan_blue_vol = 50,original_sample_vol = 6)

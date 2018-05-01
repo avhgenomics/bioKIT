@@ -7,7 +7,7 @@
 #'
 #' @param id the shiny id to be called internally, as a string.
 #' @param label The label that is displayed in the app.
-#'
+#' @export
 #' @return Returns a load file button in a shiny app.
 #' @examples
 #' #UI section

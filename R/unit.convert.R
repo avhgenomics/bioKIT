@@ -12,7 +12,7 @@
 #' @param df The dataframe holding the calculations.
 #' @param value value represents the column with the total volume.  Ex: 1234 might be 1,234 ul.
 #' @param unit the column name, as a string, that represents the unit of the value variable.
-#'
+#' @export
 #' @return returns a vector containing strings of the value with the attached unit.
 #' @examples
 #' # ADD_EXAMPLES_HERE

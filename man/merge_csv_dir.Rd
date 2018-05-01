@@ -5,7 +5,8 @@
 \title{Merge CSV Directory}
 \usage{
 merge_csv_dir(csv_directory, file.pattern = "*.csv", header = T,
-  sep = ",", quote = "", stringsAsFactors = F, fill = T)
+  sep = ",", quote = "", stringsAsFactors = F, fill = T,
+  remove_char_quotes = T)
 }
 \arguments{
 \item{csv_directory}{the object of the list.files function; full names suggested.}
@@ -21,6 +22,8 @@ merge_csv_dir(csv_directory, file.pattern = "*.csv", header = T,
 \item{stringsAsFactors}{strings as factors?}
 
 \item{fill}{fill NAs?}
+
+\item{remove_char_quotes}{logical, adds a gsub to remove \" through regular expressions.}
 }
 \value{
 Returns a df
