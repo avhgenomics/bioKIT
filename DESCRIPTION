@@ -1,7 +1,7 @@
 Package: bioKIT
 Type: Package
 Title: bioKIT: Common functions for routine molecular biology applications.
-Version: 0.1.0
+Version: 0.1.1
 Author: Andrew VonHandorf
 Maintainer: Andrew VonHandorf <yourself@somewhere.net>
 Description: This is a package that I am writing / maintaining as a way to streamline common calculations used throughout several types of experiments in molecular biology.
