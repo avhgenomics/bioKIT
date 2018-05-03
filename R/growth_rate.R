@@ -25,4 +25,4 @@ calculate_growth_rate <- function(current_number,starting_number,time.hours){
 #calculate_growth_rate(current_number = 100,starting_number = 50,time.hours = 18)
 
 
-est_cells_from_confluency
+
