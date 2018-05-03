@@ -30,8 +30,8 @@ calculate.odds.ratio <- function(case.positive,case.negative,control.positive,co
 }
 
 
-calculate.odds.ratio(case.positive = 45,
-                     case.negative = 86,
-                     control.positive = 32,
-                     control.negative = 100,return_df = T)
+#calculate.odds.ratio(case.positive = 45,
+#                     case.negative = 86,
+#                     control.positive = 32,
+#                     control.negative = 100,return_df = T)
 
