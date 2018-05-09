@@ -14,29 +14,34 @@
 #' @examples
 #' # ADD_EXAMPLES_HERE
 
-define_gel_lanes <- function(gel_img,inflect_threshold = 25,expand_lanes = 10,plot_signal = T){
+define_gel_lanes <- function(gel_img,x_inflect_threshold = 25,expand_lanes = 10,plot_signal = T){
 
   gel.matrix <- as.matrix(gel.img)
-  gel.sums.X <- data.frame(pixel_col = seq(1:dim(gel.matrix)[1]),signal_sum = apply(X = gel.matrix,MARGIN = 1,FUN = function(x){sum(x)}))
+  gel.sums.X <- data.frame(colset = "X",pixel_col = seq(1:dim(gel.matrix)[1]),signal_sum = apply(X = gel.matrix,MARGIN = 1,FUN = function(x){sum(x)}))
+  gel.sums.Y <- data.frame(colset = "Y",pixel_col = seq(1:dim(gel.matrix)[2]),signal_sum = apply(X = gel.matrix,MARGIN = 2,FUN = function(x){sum(x)}))
+  gel.sums <- rbind(gel.sums.X,gel.sums.Y)
+  gel.sums.x.inflect <- bioKIT::inflect(x = gel.sums.X$signal_sum,threshold = x_inflect_threshold)
+  #gel.sums.y.inflect <- bioKIT::inflect(x = gel.sums.Y$signal_sum,threshold = y_inflect_threshold)
 
-  gel.sums.x.inflect <- bioKIT::inflect(x = gel.sums.X$signal_sum,threshold = inflect_threshold)
-
-  minima.df <- data.frame(minima_px.x = gel.sums.x.inflect$minima)
-  minima.df$differences <- c(diff(gel.sums.x.inflect$minima),NA)
-  minima.df$lane.middle <- round(minima.df$minima_px.x+(minima.df$differences/2),0)
-  minima.df$lane.start <- minima.df$lane.middle - expand_lanes
-  minima.df$lane.end <- minima.df$lane.middle + expand_lanes
+  x.minima.df <- data.frame(minima_px.x = gel.sums.x.inflect$minima)
+  x.minima.df$differences <- c(diff(gel.sums.x.inflect$minima),NA)
+  x.minima.df$lane.middle <- round(x.minima.df$minima_px.x+(x.minima.df$differences/2),0)
+  x.minima.df$lane.start <- x.minima.df$lane.middle - expand_lanes
+  x.minima.df$lane.end <- x.minima.df$lane.middle + expand_lanes
+  x.minima.df$colset <- "X"
 
   if(plot_signal){
-    plot.lanes.x <- ggplot(gel.sums.X,aes(x=pixel_col,y=signal_sum))
-    plot(plot.lanes.x+
+    plot.lanes <- ggplot(gel.sums,aes(x=pixel_col,y=signal_sum))
+    plot(plot.lanes+
            geom_line()+
-           geom_vline(xintercept = minima.df$lane.start)+
-           geom_vline(xintercept = minima.df$lane.end))
+           geom_vline(data = x.minima.df,aes(xintercept = lane.start))+
+           geom_vline(data = x.minima.df,aes(xintercept = lane.end))+
+           facet_wrap(~colset,scales = "free",nrow = 2,ncol = 1))
   }
 
-  return(minima.df)
+  return(x.minima.df)
 }
 
+#gel.img <- imager::load.image(file = "data_ignore/20180402_cutting_and_ligation_raw.jpg")
 
-#define_gel_lanes(gel.img)
+#lanes <- define_gel_lanes(gel_img = gel.img,x_inflect_threshold = 25,expand_lanes = 10,plot_signal = T)

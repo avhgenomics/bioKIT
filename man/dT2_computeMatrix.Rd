@@ -10,33 +10,33 @@ dT2_computeMatrix(bigwig_files, bed_files, scale_regions = F,
   outFileMatrix = NULL, outSortedRegions = NULL, run_as_sys = F)
 }
 \arguments{
-\item{bigwig_files}{DESCRIPTION.}
+\item{bigwig_files}{vector of bigwig filepaths}
 
-\item{bed_files}{DESCRIPTION.}
+\item{bed_files}{vector of bed filepaths}
 
-\item{scale_regions}{DESCRIPTION.}
+\item{scale_regions}{use scale-regions mode?}
 
-\item{ref_point}{DESCRIPTION.}
+\item{ref_point}{if using reference-point mode; "TSS","TES",or "center"}
 
-\item{bin_size}{DESCRIPTION.}
+\item{bin_size}{size of the bins to use}
 
-\item{upstream_bp}{DESCRIPTION.}
+\item{upstream_bp}{how many bases upstream?}
 
-\item{downstream_bp}{DESCRIPTION.}
+\item{downstream_bp}{how many bases downstream}
 
-\item{missingDataAsZero}{DESCRIPTION.}
+\item{missingDataAsZero}{Treat missing data as zero?}
 
-\item{skipZeros}{DESCRIPTION.}
+\item{skipZeros}{skip zeros?}
 
-\item{blacklist_file}{DESCRIPTION.}
+\item{blacklist_file}{use a blacklist file?}
 
-\item{output_gz}{DESCRIPTION.}
+\item{output_gz}{filepath to the output .gz file}
 
-\item{outFileMatrix}{DESCRIPTION.}
+\item{outFileMatrix}{filepath to the output .tab file for underlying values}
 
-\item{outSortedRegions}{DESCRIPTION.}
+\item{outSortedRegions}{filepath to a bed file for outputting sorted regions.}
 
-\item{run_as_sys}{DESCRIPTION.}
+\item{run_as_sys}{Return the command as a string or run as system}
 }
 \value{
 RETURN_DESCRIPTION

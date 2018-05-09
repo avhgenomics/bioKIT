@@ -8,19 +8,19 @@ dT2_plotHeatmap(gz_file, output_file, colorMap = "viridis", dpi = 600,
   run_as_sys = F, outFileSortedRegions = NULL, outFileNameMatrix = NULL)
 }
 \arguments{
-\item{gz_file}{DESCRIPTION.}
+\item{gz_file}{gz file from dT2_computeMatrix}
 
-\item{output_file}{DESCRIPTION.}
+\item{output_file}{output file (.png, jpg, etc)}
 
-\item{colorMap}{DESCRIPTION.}
+\item{colorMap}{The available options are: ‘Spectral’, ‘summer’, ‘coolwarm’, ‘Set1’, ‘Set2’, ‘Set3’, ‘Dark2’, ‘hot’, ‘RdPu’, ‘YlGnBu’, ‘RdYlBu’, ‘gist_stern’, ‘cool’, ‘gray’, ‘GnBu’, ‘gist_ncar’, ‘gist_rainbow’, ‘Wistia’, ‘CMRmap’, ‘bone’, ‘RdYlGn’, ‘spring’, ‘terrain’, ‘PuBu’, ‘spectral’, ‘gist_yarg’, ‘BuGn’, ‘bwr’, ‘cubehelix’, ‘YlOrRd’, ‘Greens’, ‘PRGn’, ‘gist_heat’, ‘Paired’, ‘hsv’, ‘Pastel2’, ‘Pastel1’, ‘BuPu’, ‘copper’, ‘OrRd’, ‘brg’, ‘gnuplot2’, ‘jet’, ‘gist_earth’, ‘Oranges’, ‘PiYG’, ‘YlGn’, ‘Accent’, ‘gist_gray’, ‘flag’, ‘BrBG’, ‘Reds’, ‘RdGy’, ‘PuRd’, ‘Blues’, ‘Greys’, ‘autumn’, ‘pink’, ‘binary’, ‘winter’, ‘gnuplot’, ‘RdBu’, ‘prism’, ‘YlOrBr’, ‘rainbow’, ‘seismic’, ‘Purples’, ‘ocean’, ‘PuOr’, ‘PuBuGn’, ‘nipy_spectral’, ‘afmhot’}
 
-\item{dpi}{DESCRIPTION.}
+\item{dpi}{Image Resolution}
 
-\item{run_as_sys}{DESCRIPTION.}
+\item{run_as_sys}{Return the command as a string or run as system}
 
-\item{outFileSortedRegions}{DESCRIPTION.}
+\item{outFileSortedRegions}{path to output bedfile for sorted regions}
 
-\item{outFileNameMatrix}{DESCRIPTION.}
+\item{outFileNameMatrix}{path to output tab file for underlying data.}
 }
 \value{
 RETURN_DESCRIPTION

@@ -4,17 +4,17 @@
 \alias{define_gel_lanes}
 \title{Define Gel Lanes}
 \usage{
-define_gel_lanes(gel_img, inflect_threshold = 25, expand_lanes = 10,
+define_gel_lanes(gel_img, x_inflect_threshold = 25, expand_lanes = 10,
   plot_signal = T)
 }
 \arguments{
 \item{gel_img}{an image object, created using the imager package.}
 
-\item{inflect_threshold}{px threshold for calculating minima; integer, 25 by default.}
-
 \item{expand_lanes}{how far in each direction from the midpoint should lanes be "expanded? 10 by default.}
 
 \item{plot_signal}{Display the locations of the ranges? Useful for ensuring accuracy.}
+
+\item{inflect_threshold}{px threshold for calculating minima; integer, 25 by default.}
 }
 \value{
 Returns a dataframe of the calculated information.  Can also return a plot.
